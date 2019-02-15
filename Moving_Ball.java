@@ -27,7 +27,7 @@ public class Moving_Ball extends JFrame //implements KeyListener
     public int l = 120, w = 20;
     public static double velX = 0;
 
-    public CA_SallyXiao ()
+    public Moving_Ball ()
     {
 	setTitle ("Game Board");
 	setSize (1000, 600);
@@ -208,7 +208,7 @@ public class Moving_Ball extends JFrame //implements KeyListener
 /////////////////////THE METHOD THAT LAUNCHES EVERYTHING//////////////////
     public static void launch (String decide) throws IOException
     {
-	CA_SallyXiao ball = new CA_SallyXiao ();
+	Moving_Ball ball = new Moving_Ball ();
 	//this resets everything and make sure you restart
 	ball.RADIUS = 50;
 	ball.x = 250;
@@ -468,12 +468,12 @@ class myKeyListener extends JFrame implements KeyListener
 	{
 	    case KeyEvent.VK_RIGHT:
 		{
-		    CA_SallyXiao.rightPlatform ();
+		    Moving_Ball.rightPlatform ();
 		}
 		break;
 	    case KeyEvent.VK_LEFT:
 		{
-		    CA_SallyXiao.leftPlatform ();
+		    Moving_Ball.leftPlatform ();
 		}
 		break;
 
@@ -484,7 +484,7 @@ class myKeyListener extends JFrame implements KeyListener
 
     public void keyReleased (KeyEvent keyEvent)
     {
-	CA_SallyXiao.velX = 0;
+	Moving_Ball.velX = 0;
     }
 
 
@@ -493,5 +493,3 @@ class myKeyListener extends JFrame implements KeyListener
 
     }
 }
-
-
